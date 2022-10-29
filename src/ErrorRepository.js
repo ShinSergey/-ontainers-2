@@ -8,7 +8,7 @@ export default class ErrorRepository {
     errors.set(code, meaning);
   }
 
-  translate(code) {
+  static translate(code) {
     if (errors.has(code)) {
       return errors.get(code);
     }

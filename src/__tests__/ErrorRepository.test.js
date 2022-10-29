@@ -8,11 +8,9 @@ test('should create class', () => {
 });
 
 test('should translate', () => {
-  const newEr = new ErrorRepository(924, 'Wrong answer!');
-  expect(newEr.translate(924)).toEqual('Wrong answer!');
+  expect(ErrorRepository.translate(924)).toEqual('Wrong answer!');
 });
 
 test('should error', () => {
-  const newEr = new ErrorRepository(924, 'Wrong answer!');
-  expect(newEr.translate(943)).toEqual('Unknown error');
+  expect(ErrorRepository.translate(943)).toEqual('Unknown error');
 });
